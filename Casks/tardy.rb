@@ -11,13 +11,19 @@ cask "tardy" do
 
   app "Tardy.app"
 
+  postflight do
+    system "open", "/Applications/Tardy.app"
+  end
+
   caveats <<~EOS
     Tardy is not notarized with Apple.
 
-    On first launch, macOS will block the app. To open it:
-      1. Right-click Tardy.app and select "Open"
-      2. Or go to System Settings > Privacy & Security and click "Open Anyway"
+    If macOS blocks the app on first launch:
+      1. Go to System Settings > Privacy & Security
+      2. Click "Open Anyway" next to the Tardy message
+      3. Or right-click Tardy.app in /Applications and select "Open"
 
-    Tardy also requires calendar access. You'll be prompted on first launch.
+    Tardy will ask for calendar access on first launch.
+    After setup, it runs in your menu bar (calendar icon) and launches automatically on login.
   EOS
 end
