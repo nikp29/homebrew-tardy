@@ -1,6 +1,6 @@
 cask "tardy" do
-  version "0.1.7"
-  sha256 "074f079289e22122c6d5c86c9b061fce41b697dd97edbcb0d3eb10b1663978ee"
+  version "0.1.8"
+  sha256 "5ab8684fc6d0e372a89789d4b35bb518f39bfcaff7fb82bc3f5d927a33b2afa2"
 
   url "https://github.com/nikp29/tardy/releases/download/v#{version}/Tardy-#{version}.tar.gz"
   name "Tardy"
